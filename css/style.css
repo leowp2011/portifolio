@@ -185,7 +185,7 @@ textarea {
 
 .home-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, #686868, #2b2b2b), url(../../assets/svg/common-bg.svg);
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -323,7 +323,7 @@ textarea {
           font-size: 1.7rem; } }
 
 .contact {
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, #686868, #2b2b2b), url(../../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center; }
   .contact__form-container {
@@ -404,7 +404,7 @@ textarea {
 
 .project-cs-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, #686868, #2b2b2b), url(../../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -661,16 +661,28 @@ textarea {
 
 .skills {
   display: flex;
-  flex-wrap: wrap; }
-  .skills__skill {
-    padding: 1rem 2rem;
-    margin-bottom: 1.5rem;
-    margin-right: 1.5rem;
-    font-size: 1.6rem;
-    background: rgba(153, 153, 153, 0.2);
-    border-radius: 5px;
-    font-weight: 600;
-    color: #777; }
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 3rem;
+}
+
+.skills__skill {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre o ícone e o texto */
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skills__skill i {
+  font-size: 20px; /* Tamanho do ícone */
+  color: #555;
+}
 
 .mouse {
   width: 25px;
