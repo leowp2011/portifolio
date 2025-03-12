@@ -224,16 +224,16 @@
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
+                src="./assets/jpeg/note5.png"
                 alt="Captura de Tela do Software"
                 class="projects__row-img"
                 loading="lazy"
               />
             </div>
             <div class="projects__row-content">
-              <h3 class="projects__row-content-title">ELT - Extração, Carga e Transformação - Azure</h3>
+              <h3 class="projects__row-content-title">RPA Python e Selenium - Valor de frete</h3>
               <p class="projects__row-content-desc">
-                Neste projeto procurei aplicar os conceitos de ELT, que são fundamentais para a construção de um Data Warehouse. O objetivo foi extrair dados de um banco de dados SQL Server, realizar transformações e carregar em um Data Warehouse. Neste projeto utilizei 3 fontes distintas de dados (planilhas, Banco SQL Server e API's).
+                Projeto para automatizar a extração de dados de frete de tênis em sites de e-commerce, usando informações de uma planilha Excel. O objetivo é otimizar a coleta de dados, buscar modelos específicos de tênis e calcular custos de frete para uma lista de CEPs, armazenando os resultados em um arquivo Excel para análise comparativa.
               </p>
               <a
                 href="./project-2.html"
@@ -243,7 +243,7 @@
               >
             </div>
           </div>
-          <div class="projects__row">
+          <!-- <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
                 src="./assets/jpeg/project-mockup-example.jpeg"
@@ -266,7 +266,7 @@
                 >Estudo de Caso</a
               >
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -279,7 +279,7 @@
           </span>
         </h2>
         <div class="contact__form-container">
-          <form action="#" class="contact__form">
+          <form class="contact__form" onsubmit="return openEmail()">
             <div class="contact__form-field">
               <label class="contact__form-label" for="name">Nome</label>
               <input
@@ -296,7 +296,7 @@
               <input
                 required
                 placeholder="Digite seu email"
-                type="text"
+                type="email"
                 class="contact__form-input"
                 name="email"
                 id="email"
@@ -319,7 +319,22 @@
             </button>
           </form>
         </div>
-      </div>
+        
+        <script>
+          function openEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const subject = "Mensagem de contato através do portifolio";
+            const body = `Nome: ${name}%0AEmail: ${email}%0AMensagem:%0A${message}`;
+        
+            window.location.href = `mailto:leowp_2011@hotmail.com?subject=${subject}&body=${body}`;
+            
+            return false; // Impede o envio do formulário convencional
+          }
+        </script>
+        
     </section>
     <footer class="main-footer">
       <div class="main-container">
